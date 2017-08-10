@@ -22,7 +22,7 @@ if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
         $(".mb").css("display","block")
     }else{
         console.log("不是来自微信内置浏览器");
-        $(".mb").css("display","block");
+        $(".mb").css("display","none");
         val="andriod";
     }
 } else {

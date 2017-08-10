@@ -15,19 +15,19 @@
     <div class="content">
         <div class="app">
            <div class="pos">
-             <img src="img/logo.png" alt=""  align="absmiddle"/>
+             <img src="img/pos.jpg" alt=""  align="absmiddle"/>
             <span>pos端收银系统下载</span>
                <div class="posxz">选择</div>
            </div>
            <div class="android">
-               <img src="img/logo.png" alt=""  align="absmiddle"/>
-               <span>pos端收银系统下载</span>
+               <img src="img/pos.jpg" alt=""  align="absmiddle"/>
+               <span>移动端APP下载</span>
                <div class="androidxz">选择</div>
            </div>
             <div class="phone">
                 <img src="img/phone.png" alt=""/>
                 <input type="text" placeholder="手机号(必填)" name="tel" type="number" maxlength="11" onkeyup="keyup()" onblur="keyup()" autocomplete="off"/>
-                <div class="tishi"></div>
+                <div class="tishi">*为了方便你的使用 <br/> 请填写正确的手机号</div>
             </div>
             <div class="but">
             <div class="down">下载</div>
@@ -35,13 +35,16 @@
             </div>
         </div>
     </div>
-    <div class="mb" style="display: none">
-        <div  class="buton">放弃下载</div>
-    </div>
+</div>
+<div class="mb" style="display: none">
+    <div  class="buton">放弃下载</div>
 </div>
 </body>
 </html>
 <script>
+var h=document.body.clientHeight;
+    $("body").css("height",h+"px");
+$(".mb").css("height",h+"px");
     $(".buton").click(function(){
         WeixinJSBridge.call('closeWindow');
     })
